@@ -1,0 +1,42 @@
+/* @tailwind base;
+@tailwind components;
+@tailwind utilities; */
+
+.App {
+    min-height: 100vh;
+    background-color: rgb(30, 41, 59);
+    color: rgb(255, 255, 255);
+    text-align: center;
+}
+
+.hiragana-header {
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.quiz-header {
+    font-size: xx-large;
+    font: bold;
+    text-transform: uppercase;
+}
+
+.quiz-hiragana {
+    font-size: 8rem;
+    line-height: 1;
+    font: bold;
+    margin-bottom: 2rem;
+}
+
+.quiz-input {
+    margin-bottom: 2rem;
+}
+
+.input-value {
+    width: 6rem;
+    padding-bottom: 2px;
+    /* background-color: transparent; */
+    /* border-bottom: 5px solid white; */
+    outline: none;
+    text-align: center;
+    font-size: x-large;
+}
