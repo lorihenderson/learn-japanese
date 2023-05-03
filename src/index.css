@@ -1,15 +1,42 @@
-/* @tailwind base;
-@tailwind components;
-@tailwind utilities; */
-
 .App {
+    /* background-color: rgb(127, 163, 255); */
+    height: 100vh;
+    padding: 15px;
+}
+
+a:hover {
+    background-color: #b6f21e;
+    color: black;
+}
+
+nav, nav:visited {
+    background-color: rgb(30, 41, 59);
+    color: antiquewhite;
+}
+
+nav ul {
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    box-shadow: 0 4px 6px -1px rgba(10, 12, 12, 0.4);
+}
+
+nav a {
+    text-decoration: none;
+    display: inline-block;
+    padding: 1rem;
+}
+
+/* Below: Hiragana and Katakana */
+.Hiragana, .Katakana {
     min-height: 100vh;
     background-color: rgb(30, 41, 59);
     color: rgb(255, 255, 255);
     text-align: center;
 }
 
-.hiragana-header {
+.hiragana-header, .katakana-header {
     padding: 1.5rem;
     margin-bottom: 2rem;
 }
@@ -20,7 +47,7 @@
     text-transform: uppercase;
 }
 
-.quiz-hiragana {
+.quiz-hiragana, .quiz-katakana {
     font-size: 8rem;
     line-height: 1;
     font: bold;
@@ -34,8 +61,6 @@
 .input-value {
     width: 6rem;
     padding-bottom: 2px;
-    /* background-color: transparent; */
-    /* border-bottom: 5px solid white; */
     outline: none;
     text-align: center;
     font-size: x-large;
