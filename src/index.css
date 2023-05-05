@@ -9,6 +9,11 @@ a:hover {
     color: black;
 }
 
+a {
+    background-color: rgb(30, 41, 59);
+    color: wheat;
+}
+
 nav, nav:visited {
     background-color: rgb(30, 41, 59);
     color: antiquewhite;
@@ -32,7 +37,7 @@ nav a {
 .Hiragana, .Katakana {
     min-height: 100vh;
     background-color: rgb(30, 41, 59);
-    color: rgb(255, 255, 255);
+    color: wheat;
     text-align: center;
 }
 

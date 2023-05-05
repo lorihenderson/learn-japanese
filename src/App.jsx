@@ -12,13 +12,13 @@ function App() {
 		<div className="App">
 			<nav>
 				<ul>
-					<li>
+					<li className='home-li'>
 						<Link to="/">Home</Link>
 					</li>
-					<li>
+					<li className='hiragana-li'>
 						<Link to="hiragana">Hiragana</Link>
 					</li>
-					<li>
+					<li className='katakana-li'>
 						<Link to="katakana">Katakana</Link>
 					</li>
 				</ul>
