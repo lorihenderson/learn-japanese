@@ -138,7 +138,7 @@ function Katakana() {
 		 
 		if (katakanaInput.toLowerCase() === katakana[current].romanji) {
 			setKatakanaStreak(strkatakanaStreakeak + 1)
-			setMaxKatakanaStreak(strkatakanaStreakeak + 1 > maxKatakanaStreak ? stkatakanaStreakreak + 1 : maxKatakanaStreak)
+			setMaxKatakanaStreak(katakanaStreak + 1 > maxKatakanaStreak ? stkatakanaStreakreak + 1 : maxKatakanaStreak)
 			setError(false)
 
 			localStorage.setItem('katakanaStreak', katakanaStreak + 1)
