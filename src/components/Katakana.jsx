@@ -129,11 +129,11 @@ function Katakana() {
 		setKatakanaCurrent(randomKIndex)
 	}
 
-	const handleChange = (e) => {
+	const handleKataChange = (e) => {
 		setKatakanaInput(e.target.value)
 	}
 
-	const handleSubmit = (e) => {
+	const handleKataSubmit = (e) => {
 		e.preventDefault()
 		 
 		if (katakanaInput.toLowerCase() === katakana[current].romanji) {
@@ -175,10 +175,10 @@ function Katakana() {
 			</div>
 
 			<div className="quiz-input ">
-				<form onSubmit={handleSubmit}>
+				<form onSubmit={handleKataSubmit}>
 					<input
 						type="text"
-						onChange={handleChange}
+						onChange={handleKataChange}
 						value={input}
 						className="input-value" />
 				</form>
