@@ -120,13 +120,13 @@ function Katakana() {
 	const [current, setCurrent] = useState(0)
 	
 	const [streak, setStreak] = useState(0)
-	const [maxStreak, setMaxStreak] = useState(0)
+	const [maxKatakanaStreak, setMaxKatakanaStreak] = useState(0)
 
 	const [error, setError] = useState(false)
 
 	const setRandomKatakana = () => {
 		const randomIndex = Math.floor(Math.random() * katakana.length)
-		setCurrent(randomIndex)
+		setKatakanaCurrent(randomIndex)
 	}
 
 	const handleChange = (e) => {
@@ -138,11 +138,11 @@ function Katakana() {
 		 
 		if (input.toLowerCase() === katakana[current].romanji) {
 			setStreak(streak + 1)
-			setMaxStreak(streak + 1 > maxStreak ? streak + 1 : maxStreak)
+			setMaxKatakanaStreak(streak + 1 > maxKatakanaStreak ? streak + 1 : maxKatakanaStreak)
 			setError(false)
 
 			localStorage.setItem('streak', streak + 1)
-			localStorage.setItem('maxStreak', streak + 1 > maxStreak ? streak + 1 : maxStreak)
+			localStorage.setItem('maxKatakanaStreak', streak + 1 > maxKatakanaStreak ? streak + 1 : maxKatakanaStreak)
 		} else {
 			const h = katakana[current].katakana
 			const r = katakana[current].romanji
@@ -158,7 +158,7 @@ function Katakana() {
 	useEffect(() => {
 		setRandomKatakana()
 		setStreak(parseInt(localStorage.getItem('streak')) || 0)
-		setMaxStreak(parseInt(localStorage.getItem('maxStreak')) || 0)
+		setMaxKatakanaStreak(parseInt(localStorage.getItem('maxKatakanaStreak')) || 0)
 	}, [])
 
 	return (

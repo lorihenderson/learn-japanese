@@ -10,3 +10,4 @@ npm run dev
 - Allow Enter functionality for mobile, tablet users
 - Include a button for submitting your answers
 - Allow capitalization in answers
+- Katakana page is not refreshing and changing the character
