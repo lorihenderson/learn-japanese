@@ -2,6 +2,7 @@
     /* background-color: rgb(127, 163, 255); */
     height: 100vh;
     padding: 15px;
+    font-family: 'Courier New', Courier, monospace;
 }
 
 a:hover {

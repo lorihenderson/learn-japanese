@@ -5,7 +5,6 @@ import Home from './components/Home'
 import Katakana from './components/Katakana'
 import NotFound from './components/NotFound'
 
-
 function App() {
 
 	return (
