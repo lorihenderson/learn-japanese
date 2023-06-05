@@ -137,8 +137,8 @@ function Katakana() {
 		e.preventDefault()
 		 
 		if (katakanaInput.toLowerCase() === katakana[current].romanji) {
-			setKatakanaStreak(strkatakanaStreakeak + 1)
-			setMaxKatakanaStreak(katakanaStreak + 1 > maxKatakanaStreak ? stkatakanaStreakreak + 1 : maxKatakanaStreak)
+			setKatakanaStreak(katakanaStreak + 1)
+			setMaxKatakanaStreak(katakanaStreak + 1 > maxKatakanaStreak ? katakanaStreak + 1 : maxKatakanaStreak)
 			setError(false)
 
 			localStorage.setItem('katakanaStreak', katakanaStreak + 1)
@@ -147,7 +147,7 @@ function Katakana() {
 			const k = katakana[current].katakana
 			const rm = katakana[current].romanji
 			setError(`Wrong! The correct answer for ${k} is ${rm}`)
-			setStreak(0)
+			setKatakanaStreak(0)
 			localStorage.setItem('streak', 0)
 		}
 
@@ -179,7 +179,7 @@ function Katakana() {
 					<input
 						type="text"
 						onChange={handleKataChange}
-						value={input}
+						value={katakanaInput}
 						className="input-value" />
 				</form>
 			</div>
