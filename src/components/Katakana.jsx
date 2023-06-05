@@ -166,7 +166,7 @@ function Katakana() {
 			<header className="katakana-header">
 				<h1 className="quiz-header">Katakana Quiz</h1>
 				<div>
-					<p>{streak} / {maxStreak}</p>
+					<p>{streak} / {maxKatakanaStreak}</p>
 				</div>
 			</header>
 
@@ -180,7 +180,7 @@ function Katakana() {
 						type="text"
 						onChange={handleChange}
 						value={input}
-						className="input-value " />
+						className="input-value" />
 				</form>
 			</div>
 			{error && 
