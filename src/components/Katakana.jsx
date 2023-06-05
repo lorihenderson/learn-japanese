@@ -171,7 +171,7 @@ function Katakana() {
 			</header>
 
 			<div className="quiz-katakana">
-				<p>{katakana[current].katakana}</p>
+				<p>{katakana[katakanaCurrent].katakana}</p>
 			</div>
 
 			<div className="quiz-input ">
@@ -180,7 +180,7 @@ function Katakana() {
 						type="text"
 						onChange={handleKataChange}
 						value={katakanaInput}
-						className="input-value" />
+						className="kata-input-value" />
 				</form>
 			</div>
 			{error && 
