@@ -6,7 +6,8 @@ npm run dev
 - Opposite words with pictures
 - Kanji
 - Drag and drop game
-
-## Bugs / Fixes
-- Routing text color
-- Fix quiz max streak, same number for both hiragana and katakana
+- Change font-style
+- Allow Enter functionality for mobile, tablet users
+- Include a button for submitting your answers
+- Allow capitalization in answers
+- Katakana page is not refreshing and changing the character

@@ -116,49 +116,49 @@ function Katakana() {
     { romanji: 'ryo', katakana: 'リョ' },
 	]
 
-	const [input, setInput] = useState('')
-	const [current, setCurrent] = useState(0)
+	const [katakanaInput, setKatakanaInput] = useState('')
+	const [katakanaCurrent, setKatakanaCurrent] = useState(0)
 	
-	const [streak, setStreak] = useState(0)
-	const [maxStreak, setMaxStreak] = useState(0)
+	const [katakanaStreak, setKatakanaStreak] = useState(0)
+	const [maxKatakanaStreak, setMaxKatakanaStreak] = useState(0)
 
 	const [error, setError] = useState(false)
 
 	const setRandomKatakana = () => {
-		const randomIndex = Math.floor(Math.random() * katakana.length)
-		setCurrent(randomIndex)
+		const randomKIndex = Math.floor(Math.random() * katakana.length)
+		setKatakanaCurrent(randomKIndex)
 	}
 
-	const handleChange = (e) => {
-		setInput(e.target.value)
+	const handleKataChange = (e) => {
+		setKatakanaInput(e.target.value)
 	}
 
-	const handleSubmit = (e) => {
+	const handleKataSubmit = (e) => {
 		e.preventDefault()
 		 
-		if (input.toLowerCase() === katakana[current].romanji) {
-			setStreak(streak + 1)
-			setMaxStreak(streak + 1 > maxStreak ? streak + 1 : maxStreak)
+		if (katakanaInput.toLowerCase() === katakana[current].romanji) {
+			setKatakanaStreak(katakanaStreak + 1)
+			setMaxKatakanaStreak(katakanaStreak + 1 > maxKatakanaStreak ? katakanaStreak + 1 : maxKatakanaStreak)
 			setError(false)
 
-			localStorage.setItem('streak', streak + 1)
-			localStorage.setItem('maxStreak', streak + 1 > maxStreak ? streak + 1 : maxStreak)
+			localStorage.setItem('katakanaStreak', katakanaStreak + 1)
+			localStorage.setItem('maxKatakanaStreak', katakanaStreak + 1 > maxKatakanaStreak ? katakanaStreak + 1 : maxKatakanaStreak)
 		} else {
-			const h = katakana[current].katakana
-			const r = katakana[current].romanji
-			setError(`Wrong! The correct answer for ${h} is ${r}`)
-			setStreak(0)
+			const k = katakana[current].katakana
+			const rm = katakana[current].romanji
+			setError(`Wrong! The correct answer for ${k} is ${rm}`)
+			setKatakanaStreak(0)
 			localStorage.setItem('streak', 0)
 		}
 
-		setInput('')
-		setRandomkatakana()
+		setKatakanaInput('')
+		setRandomKatakana()
 	}
 
 	useEffect(() => {
 		setRandomKatakana()
-		setStreak(parseInt(localStorage.getItem('streak')) || 0)
-		setMaxStreak(parseInt(localStorage.getItem('maxStreak')) || 0)
+		setKatakanaStreak(parseInt(localStorage.getItem('katakanaStreak')) || 0)
+		setMaxKatakanaStreak(parseInt(localStorage.getItem('maxKatakanaStreak')) || 0)
 	}, [])
 
 	return (
@@ -166,21 +166,21 @@ function Katakana() {
 			<header className="katakana-header">
 				<h1 className="quiz-header">Katakana Quiz</h1>
 				<div>
-					<p>{streak} / {maxStreak}</p>
+					<p>{katakanaStreak} / {maxKatakanaStreak}</p>
 				</div>
 			</header>
 
 			<div className="quiz-katakana">
-				<p>{katakana[current].katakana}</p>
+				<p>{katakana[katakanaCurrent].katakana}</p>
 			</div>
 
 			<div className="quiz-input ">
-				<form onSubmit={handleSubmit}>
+				<form onSubmit={handleKataSubmit}>
 					<input
 						type="text"
-						onChange={handleChange}
-						value={input}
-						className="input-value " />
+						onChange={handleKataChange}
+						value={katakanaInput}
+						className="kata-input-value" />
 				</form>
 			</div>
 			{error && 
